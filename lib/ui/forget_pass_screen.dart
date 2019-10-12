@@ -1,0 +1,13 @@
+import 'package:flutter/material.dart';
+
+class ForgetPass extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: Center(
+          child: Text('ForgetPass'),
+        )
+    );
+  }
+}
