@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ku_app/ui/main_screen.dart';
 import 'package:ku_app/ui/not_found_page.dart';
 import 'package:ku_app/utils/route_generator.dart';
+import 'package:ku_app/utils/uidata.dart';
+import 'utils/uidata.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,7 +21,8 @@ class MyApp extends StatelessWidget {
               color: Colors.lightBlueAccent,
             ),
             iconTheme: IconThemeData(color: Colors.white, size: 28),
-            backgroundColor: Colors.white),
+            backgroundColor: Colors.white,
+            fontFamily: Config.defaultFont),
         home: Main(),
         onGenerateRoute: RouteGenerator.authorizedRoute,
         onUnknownRoute: (RouteSettings rs) => new MaterialPageRoute(

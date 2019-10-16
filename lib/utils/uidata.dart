@@ -2,9 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-//App Font
-final String defaultFont = "AvenirNextLTPro";
-
 class AppSize {
   static final double leadingAppBarIcon = 28.0;
   //Avatar
@@ -73,158 +70,158 @@ class MyColors {
   static const darkGray = const Color(0xFF2A2E3A);
   static const blackRussian = const Color(0xFF20242F);
   static const text_login = const Color(0xffff2d55);
-  static const redMedium_tanHide_gradient = LinearGradient(colors: [redMedium, tanHide]);
+  static const redMedium_tanHide_gradient = LinearGradient(colors: [warmBlue, robinSEgg]);
 }
 
 class StylesText {
   static const styleText50BoldWhite = const TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 50.0);
   static const headline1Left = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 40.0);
   static const headline1Center = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 40.0);
   static const largeTitle = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 34.0);
   static const headline2Left = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 28.0);
   static const headline2Center = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 28.0);
   static const headline3RightBold = const TextStyle(
       color: Colors.black,
-      fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontWeight: FontWeight.w700,
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 22.0);
   static const headline3LeftBold = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 22.0);
   static const headline3CenterBold = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 22.0);
   static const headline3RightRegular = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 22.0);
   static const headline3LeftRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 22.0);
   static const headline3LeftRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 22.0);
   static const headline3CenterRegular = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 22.0);
   static const body20RightBold = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 20.0);
   static const body20LeftBold = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 20.0);
   static const body20CenterBold = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 20.0);
   static const body20LeftRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 20.0);
   static const body20CenterRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 20.0);
   static const body20CenterRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 20.0);
   static const body17RightSemiBoldWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17RightSemiBold = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17LeftSemiBoldWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17LeftSemiBold = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17CenterSemiBoldWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17CenterSemiBold = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const bodySemiBoldLeftBlack17pt = const TextStyle(
@@ -236,61 +233,61 @@ class StylesText {
   static const body17RightRegularBlack = const TextStyle(
       color: const Color(0x66000000),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17RightRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17RightRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17LeftRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17LeftRegularGrey = const TextStyle(
       color: const Color(0x66ffffff),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17LeftRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17CenterRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17CenterRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17CenterRegularBlack = const TextStyle(
       color: const Color(0x66000000),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const body17CenterRegularGrey = const TextStyle(
       color: const Color(0xff4e586e),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 17.0);
   static const bodyRegularLeftBlack17pt = const TextStyle(
@@ -302,55 +299,55 @@ class StylesText {
   static const tagLine15SemiBoldNormal = const TextStyle(
       color: const Color(0xffff2d55),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const tagLine15SemiBoldWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const tagLine15SemiBold = const TextStyle(
       color: const Color(0x67ffffff),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15RightSemiBold = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15RightSemiBoldWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15LeftSemiBold = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15LeftSemiBoldWhite = const TextStyle(
       color: const Color(0xffffffff),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15CenterSemiBold = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15CenterSemiBoldWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const bodyMediumLeftWhite15pt = const TextStyle(
@@ -362,49 +359,49 @@ class StylesText {
   static const body15RightRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15RightRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15RightRegularBlack = const TextStyle(
       color: const Color(0x66000000),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15LeftRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15LeftRegularSlate = const TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15LeftRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15CenterRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const body15CenterRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
   static const bodyRegularLeftGrey15 = const TextStyle(
@@ -416,13 +413,13 @@ class StylesText {
   static const blackDarkH400BodySemiBoldAlignLeft = const TextStyle(
       color: const Color(0xff0a1f44),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 14.0);
   static const tagLine13SemiBold = const TextStyle(
       color: const Color(0x67ffffff),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 13.0);
   static const bodySemiBoldCenterBlack13pt = const TextStyle(
@@ -434,49 +431,49 @@ class StylesText {
   static const caption13RightRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 13.0);
   static const caption13RightRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 13.0);
   static const caption13RightRegularBlack = const TextStyle(
       color: const Color(0x66000000),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 13.0);
   static const caption13LeftRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 13.0);
   static const caption13LeftRegularDark = const TextStyle(
       color: const Color(0xff4e586e),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 13.0);
   static const caption13LeftRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 13.0);
   static const caption13CenterRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 13.0);
   static const caption13CenterRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 13.0);
   static const caption13ptBlackReg = const TextStyle(
@@ -494,57 +491,65 @@ class StylesText {
   static const blackDisabledH200CaptionRegularAlignRight = const TextStyle(
       color: const Color(0xffa6aebc),
       fontWeight: FontWeight.w500,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 12.0);
   static const tagLine11SemiBold = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 11.0);
   static const tagLine11SemiBoldWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 11.0);
   static const caption11RightRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 11.0);
   static const caption11RightRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 11.0);
   static const caption11LeftRegular = const TextStyle(
       color: const Color(0xfff54b64),
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 11.0);
   static const caption11CenterRegular = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 11.0);
   static const activeText = const TextStyle(
       color: Color(0xfff54b64),
       fontWeight: FontWeight.w500,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 10.0);
   static const UnActiveText = const TextStyle(
       color: MyColors.slate,
       fontWeight: FontWeight.w500,
-      fontFamily: "Avenir",
+      fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 10.0);
-  static const link = 'https://ku-app.me/home/';
+}
 
+class Config{
+  //App Font
+  static const String defaultFont = "Roboto";
+  static const linkHome = 'https://ku-app.me/home/';
+  static const linkLogin = 'https://ku.ku999.net/Mobile/Home/Login';
+  static const linkRegister = 'https://ku.ku999.net/Mobile/Register/Register';
+  static const linkForgetPass = 'https://ku.ku999.net/Mobile/Member/ForgetPwd';
+  static const linkContact = 'https://ku.ku999.net/Mobile/Member/ServiceCenter';
 }

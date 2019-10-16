@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ku_app/data/service.dart';
 import 'package:ku_app/utils/uidata.dart';
 import 'package:ku_app/widget/filled_round_button.dart';
-import 'package:ku_app/widget/form_voucher.dart';
 import 'package:ku_app/widget/text_input_validation.dart';
 
 class Voucher extends StatefulWidget {
@@ -13,10 +12,15 @@ class Voucher extends StatefulWidget {
 class VoucherState extends State<Voucher> {
   bool isNameInputValid = true, isSdtInputValid = true;
   String nameInputValidateErr = "", sdtInputValidateErr = "";
+  bool _isDone = true;
 
   TextEditingController nameController = new TextEditingController(),
       sdtController = new TextEditingController(),
       tkController = new TextEditingController();
+
+  void setSendData(bool isDone) {
+    setState(() => this._isDone = isDone);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,15 +58,18 @@ class VoucherState extends State<Voucher> {
             const SizedBox(
               height: 30.0,
             ),
-            Container(
-              width: AppSize.loginButtonWidth,
-              height: AppSize.loginButtonHeight,
-              child: FilledRoundButton.withGradient(
-                gradientColor: MyColors.redMedium_tanHide_gradient,
-                text: Text("Gửi", style: StylesText.tagLine15SemiBoldWhite),
-                cb: () => saveData(context),
-              ),
-            ),
+            _isDone
+                ? Container(
+                    width: AppSize.loginButtonWidth,
+                    height: AppSize.loginButtonHeight,
+                    child: FilledRoundButton.withGradient(
+                      gradientColor: MyColors.redMedium_tanHide_gradient,
+                      text:
+                          Text("Gửi", style: StylesText.tagLine15SemiBoldWhite),
+                      cb: () => saveData(context),
+                    ),
+                  )
+                : CircularProgressIndicator()
           ],
         ),
       ),
@@ -70,18 +77,36 @@ class VoucherState extends State<Voucher> {
   }
 
   saveData(BuildContext context) {
+    if (nameController.text.isNotEmpty &&
+        sdtController.text.isNotEmpty &&
+        tkController.text.isNotEmpty) {
+      setSendData(false);
+      LService.saveSignUp(
+              nameController.text, sdtController.text, tkController.text)
+          .then((value) {
+        print('then' + value.toString());
+        if (value) {
+          showDone(context, true);
+        }
+      }).catchError((e) {
+        print('catchError');
+        showDone(context, false);
+      });
+    } else {
+      showEmty(context);
+    }
+    /*
+    //TODO GET Data google SHEET
     LService.getData().then((list) {
       nameController.text = list[0];
       sdtController.text = list[1];
       tkController.text = list[2];
     });
-    /*LService.saveSignUp().then(showDone(context, true)).catchError((e) {
-      print('catchError');
-      showDone(context, false);
-    });*/
+    */
   }
 
   showDone(BuildContext context, bool isSuccess) {
+    setSendData(true);
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -91,6 +116,28 @@ class VoucherState extends State<Voucher> {
           content: new Text(isSuccess
               ? "Đã hoàn thành đăng ký nhận ưu đãi"
               : "Đăng ký nhận ưu đãi không thành công. Vui lòng thử lại!"),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("Đồng ý."),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  showEmty(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("Lỗi!"),
+          content: new Text("Xin vui lòng điền đầy đủ thông tin."),
           actions: <Widget>[
             // usually buttons at the bottom of the dialog
             new FlatButton(

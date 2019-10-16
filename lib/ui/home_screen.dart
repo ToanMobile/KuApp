@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ku_app/utils/uidata.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class Home extends StatefulWidget {
@@ -17,7 +18,7 @@ class HomeState extends State<Home> {
       child: WebView(
         key: UniqueKey(),
         javascriptMode: JavascriptMode.unrestricted,
-        initialUrl: 'https://kubet365.net/',
+        initialUrl: Config.linkLogin,
       ),
     );
   }

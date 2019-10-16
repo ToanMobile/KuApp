@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:ku_app/utils/uidata.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class Contact extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Center(
-          child: Text('Contact'),
-        )
+    return  Container(
+      child: WebView(
+        key: UniqueKey(),
+        javascriptMode: JavascriptMode.unrestricted,
+        initialUrl: Config.linkContact,
+      ),
     );
   }
 }

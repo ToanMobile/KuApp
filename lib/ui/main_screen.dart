@@ -1,4 +1,6 @@
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ku_app/ui/home_screen.dart';
 import 'package:ku_app/ui/not_found_page.dart';
 import 'package:ku_app/ui/voucher_screen.dart';
@@ -30,7 +32,6 @@ class Main extends StatefulWidget {
 class MainState extends State<Main> {
   int _selectedDrawerIndex = 0;
 
-
   _getDrawerItemWidget(int pos) {
     switch (pos) {
       case 0:
@@ -51,8 +52,24 @@ class MainState extends State<Main> {
     Navigator.of(context).pop(); // close the drawer
   }
 
+  bool checkTimeExit() {
+    DateTime currentDate = DateTime.now(); //DateTime
+    var dateExpire = DateTime.parse("2019-10-30 00:00:00Z"); //DateTime.parse("2019-10-30 00:00:00Z");
+    if (currentDate.millisecond > dateExpire.millisecond) {
+      return true;
+    }
+    return false;
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (checkTimeExit()) {
+      if (Platform.isAndroid) {
+        SystemNavigator.pop();
+      } else {
+        SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+      }
+    }
     var drawerOptions = <Widget>[];
     for (var i = 0; i < widget.drawerItems.length; i++) {
       var d = widget.drawerItems[i];

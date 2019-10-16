@@ -29,25 +29,35 @@ class LService {
   static final RANGE_ORDER = 'orders!A1:Q30';
   static final RANGE_MENU = 'menu!A1:Q30';
 
-  static Future<bool> saveSignUp() async {
+  static Future<bool> saveSignUp(String name, String sdt, String tk) async {
     var client = await clientViaServiceAccount(_CREDENTIALS, _SCOPES);
     var api = sheets.SheetsApi(client);
-    sheets.ValueRange range = new sheets.ValueRange();
-    range.range = 'A1' + ':' + 'A3';
-    print(range.range);
-    List<String> list = new List();
-    for (int i = 1; i <= 3; i++) {
-      list.add(i.toString());
-    }
+    var isPush = false;
+    sheets.ValueRange range = sheets.ValueRange();
+    List<String> listData = new List();
+    listData.add(name);
+    listData.add(sdt);
+    listData.add(tk);
     List<List<String>> valueRange = new List();
-    valueRange.add(list);
+    valueRange.add(listData);
     range.values = valueRange;
-    print('valueRange=' + valueRange.single.toString());
-    print('range=' + range.toString());
-    api.spreadsheets.values.update(range, SPREADSHEET_ID, range.range,
-        valueInputOption: 'USER_ENTERED');
+    range.range = RANGE_SIGN_UP;
+    print('valueRange=' + valueRange.toString());
+    print('range=' + range.range);
+    await api.spreadsheets.values
+        .append(range, SPREADSHEET_ID, range.range,
+            valueInputOption: 'USER_ENTERED')
+        .then((data) {
+      if (data != null)
+        isPush = true;
+      else
+        isPush = false;
+    }).catchError((onError) {
+      print(onError);
+      isPush = false;
+    });
     LState.reset();
-    return false;
+    return isPush;
   }
 
   static Future<List<String>> getData() async {
@@ -59,13 +69,13 @@ class LService {
       result = _;
     }).whenComplete(() {
       for (int i = 0; i < result.values.length; i++) {
-        print('values='+ result.values[i].toString());
-        for(String data in result.values[i]){
+        //print('values='+ result.values[i].toString());
+        for (String data in result.values[i]) {
           listData.add(data);
         }
       }
     });
-    print('orders='+ listData.toString());
+    //print('orders='+ listData.toString());
     return listData;
   }
 

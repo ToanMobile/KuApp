@@ -59,7 +59,7 @@ class _TextInputValidationState extends State<TextInputValidation> {
       controller: widget.controller,
       placeholder: widget.hintText,
       placeholderStyle: TextStyle(
-        color: MyColors.lightBlueGrey,
+        color: MyColors.blueGrey,
         fontSize: 18.0,
       ),
       style: TextStyle(color: MyColors.black),
