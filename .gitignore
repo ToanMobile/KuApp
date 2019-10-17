@@ -14,5 +14,4 @@ doc/api/
 *.iml
 /pubspec.yaml
 /android/.gradle/
-/.idea/
-/android/.idea/
+*.idea/

@@ -1,4 +1,4 @@
-import 'dart:io' show Platform;
+import 'dart:io' show Platform, exit;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ku_app/ui/home_screen.dart';
@@ -53,23 +53,26 @@ class MainState extends State<Main> {
   }
 
   bool checkTimeExit() {
-    DateTime currentDate = DateTime.now(); //DateTime
-    var dateExpire = DateTime.parse("2019-10-30 00:00:00Z"); //DateTime.parse("2019-10-30 00:00:00Z");
-    if (currentDate.millisecond > dateExpire.millisecond) {
+    DateTime currentDate = DateTime.now();
+    var dateExpire = DateTime.parse("2019-10-25 00:00:00Z");
+    if (currentDate.millisecondsSinceEpoch > dateExpire.millisecondsSinceEpoch) {
       return true;
     }
     return false;
   }
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    super.initState();
+    print(checkTimeExit());
     if (checkTimeExit()) {
-      if (Platform.isAndroid) {
-        SystemNavigator.pop();
-      } else {
-        SystemChannels.platform.invokeMethod('SystemNavigator.pop');
-      }
+      exit(0);
+      SystemNavigator.pop();
     }
+  }
+
+  @override
+  Widget build(BuildContext context) {
     var drawerOptions = <Widget>[];
     for (var i = 0; i < widget.drawerItems.length; i++) {
       var d = widget.drawerItems[i];
@@ -90,7 +93,6 @@ class MainState extends State<Main> {
         onTap: () => _onSelectItem(i),
       ));
     }
-
     return Scaffold(
       appBar: AppBar(
         // here we display the title corresponding to the fragment

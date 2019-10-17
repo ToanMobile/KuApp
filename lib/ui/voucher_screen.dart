@@ -87,6 +87,8 @@ class VoucherState extends State<Voucher> {
         print('then' + value.toString());
         if (value) {
           showDone(context, true);
+        } else {
+          showDone(context, false);
         }
       }).catchError((e) {
         print('catchError');
