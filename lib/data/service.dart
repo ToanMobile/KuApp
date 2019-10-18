@@ -1,6 +1,7 @@
 import 'package:googleapis/sheets/v4.dart' as sheets;
 import 'package:googleapis_auth/auth_io.dart';
 import 'state.dart';
+import 'package:intl/intl.dart';
 
 class LService {
   static final _CREDENTIALS = new ServiceAccountCredentials.fromJson(r'''
@@ -22,7 +23,7 @@ class LService {
       "705447754849-44rctjrj3bn7k0pqf1emlah1vdmg4j5c.apps.googleusercontent.com";
   static final SPREADSHEET_ID = "1uF7hijPwobrH2EuBTQGx1tYC8SS_L8HM15t28S_biqg";
   static final _SCOPES = const ['https://www.googleapis.com/auth/spreadsheets'];
-  static final RANGE_SIGN_UP = 'KuApp!A1:C1';
+  static final RANGE_SIGN_UP = 'KuApp!A1:D1';
   static final RANGE_ORDER = 'orders!A1:Q30';
   static final RANGE_MENU = 'menu!A1:Q30';
 
@@ -32,6 +33,9 @@ class LService {
     var isPush = false;
     sheets.ValueRange range = sheets.ValueRange();
     List<String> listData = new List();
+    var time = DateFormat("dd-MM-yyyy hh:mm a").format(DateTime.now());
+    print(time.toString());
+    listData.add(time.toString());
     listData.add(name);
     listData.add(sdt);
     listData.add(tk);
