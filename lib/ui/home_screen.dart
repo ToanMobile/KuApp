@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ku_app/ui/home_login_screen.dart';
 import 'package:ku_app/ui/home_support_screen.dart';
-import 'package:ku_app/ui/home_voucher_screen.dart';
 import 'package:ku_app/ui/not_found_page.dart';
+import 'package:ku_app/ui/voucher_screen.dart';
 import 'package:ku_app/utils/uidata.dart';
+
+import 'home_rss_screen.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -24,9 +25,9 @@ class HomeState extends State<Home> {
   _getBottomItemWidget(int pos) {
     switch (pos) {
       case 0:
-        return HomeLoginScreen();
+        return HomeRssScreen();
       case 1:
-        return HomeVoucherScreen();
+        return Voucher();
       case 2:
         return HomeSupportScreen();
       default:

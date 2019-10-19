@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../utils/uidata.dart';
-import '../utils/uidata.dart';
 
 class Welcome extends StatelessWidget {
   // This widget is the root of your application.

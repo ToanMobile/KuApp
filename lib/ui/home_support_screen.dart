@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ku_app/ui/contact_screen.dart';
-import 'package:ku_app/ui/forget_pass_screen.dart';
-import 'package:ku_app/ui/signup_screen.dart';
-import 'not_found_page.dart';
+import 'package:ku_app/utils/uidata.dart';
+import 'package:ku_app/widget/webview.dart';
 
 class HomeSupportScreen extends StatefulWidget {
   @override
@@ -14,9 +12,5 @@ class HomeSupportScreen extends StatefulWidget {
 class HomeSupportState extends State<HomeSupportScreen> {
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-
-    );
-  }
+  Widget build(BuildContext context) => WebviewKuApp(Config.linkHomeSupport);
 }

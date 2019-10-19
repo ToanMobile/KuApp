@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:ku_app/ui/home_link_screen.dart';
 import 'package:ku_app/ui/not_found_page.dart';
-import 'package:ku_app/ui/support_screen.dart';
-
 
 class RouteGenerator {
   static Route authorizedRoute(RouteSettings settings) {
     switch (settings.name) {
-      case '/support':
-        return _buildRoute(settings, Support());
+      case '/home':
+        return _buildRoute(settings, HomeLinkScreen());
       default:
         return _buildRouteDialog(settings, NotFoundPage());
     }

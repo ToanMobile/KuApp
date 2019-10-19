@@ -546,10 +546,11 @@ class StylesText {
 class Config{
   //App Font
   static const String defaultFont = "Roboto";
-  static const linkHome = 'https://ku-app.me/home/';
+  static const linkHome = 'https://kucasino.ltd/';
   static const linkLogin = 'https://ku.ku999.net/Mobile/Home/Login';
   static const linkRegister = 'https://ku.ku999.net/Mobile/Register/Register';
   static const linkForgetPass = 'https://ku.ku999.net/Mobile/Member/ForgetPwd';
   static const linkContact = 'https://ku.ku999.net/Mobile/Member/ServiceCenter';
   static const linkRss = 'https://news.google.com/rss?hl=vi&gl=VN&ceid=VN:vi';
+  static const linkHomeSupport = 'https://tawk.to/chat/5daae32778ab74187a5a70a7/default';
 }

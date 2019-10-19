@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ku_app/ui/home_screen.dart';
 import 'package:ku_app/ui/not_found_page.dart';
-import 'package:ku_app/ui/voucher_screen.dart';
 import 'package:ku_app/ui/support_screen.dart';
+import 'package:ku_app/ui/voucher_screen.dart';
 import 'package:ku_app/ui/welcome_screen.dart';
 import 'package:ku_app/utils/uidata.dart';
 
@@ -20,7 +20,7 @@ class Main extends StatefulWidget {
     DrawerItem("Trang chủ", Icons.home),
     DrawerItem("Giới thiệu", Icons.info),
     DrawerItem("Hướng dẫn", Icons.supervisor_account),
-    DrawerItem("Ưu đãi", Icons.card_giftcard)
+    DrawerItem("Nhận khuyến mãi", Icons.card_giftcard)
   ];
 
   @override
@@ -79,15 +79,11 @@ class MainState extends State<Main> {
       drawerOptions.add(new ListTile(
         leading: new Icon(
           d.icon,
-          color:
-              _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black,
+          color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black,
         ),
         title: new Text(
           d.title,
-          style: TextStyle(
-              color: _selectedDrawerIndex == i
-                  ? Colors.lightBlueAccent
-                  : Colors.black),
+          style: TextStyle(color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black),
         ),
         selected: i == _selectedDrawerIndex,
         onTap: () => _onSelectItem(i),
@@ -102,12 +98,36 @@ class MainState extends State<Main> {
       drawer: Drawer(
         child: Column(
           children: <Widget>[
-            Image.asset(UIData.iconApp),
+            Container(
+              color: Colors.white,
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width,
+              height: 220,
+              margin: EdgeInsets.only(top: 30),
+              child: Image.asset(
+                UIData.iconApp,
+                fit: BoxFit.cover,
+              ),
+            ),
             Column(children: drawerOptions)
           ],
         ),
       ),
       body: _getDrawerItemWidget(_selectedDrawerIndex),
+      floatingActionButton: Padding(
+          padding: EdgeInsets.only(top: 50),
+          child: FloatingActionButton.extended(
+            elevation: 10,
+            onPressed: () {
+              Navigator.pushNamed(context, '/home');
+            },
+            icon: Icon(Icons.home),
+            label: Text("Trang chủ"),
+          ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
     );
   }
 }
