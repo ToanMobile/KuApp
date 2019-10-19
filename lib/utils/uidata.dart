@@ -33,10 +33,9 @@ class UIData {
   static const String iconApp               = "$imageDir/ic_launch.jpg";
 
   //TABBAR
-  static const String iconTabHome             = "$imageDir/ic_tab_home.png";
-  static const String iconTabPicture              = "$imageDir/ic_tab_picture.png";
-  static const String iconTabPlay              = "$imageDir/ic_tab_play.png";
-  static const String iconTabMusic             = "$imageDir/ic_tab_music.png";
+  static const String iconTabHome             = "$imageDir/icons_home.png";
+  static const String iconTabVoucher             = "$imageDir/icons_discount.png";
+  static const String iconTabsupport             = "$imageDir/icons_headset.png";
 }
 
 class MyColors {
@@ -552,4 +551,5 @@ class Config{
   static const linkRegister = 'https://ku.ku999.net/Mobile/Register/Register';
   static const linkForgetPass = 'https://ku.ku999.net/Mobile/Member/ForgetPwd';
   static const linkContact = 'https://ku.ku999.net/Mobile/Member/ServiceCenter';
+  static const linkRss = 'https://news.google.com/rss?hl=vi&gl=VN&ceid=VN:vi';
 }
