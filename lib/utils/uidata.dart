@@ -32,7 +32,7 @@ class Margin {
 class UIData {
   //images
   static const String imageDir = "assets";
-  static const String iconApp = "$imageDir/ic_launch.jpg";
+  static const String iconApp = "$imageDir/icon/icon_trongsuot.png";
 
   //TABBAR
   static const String iconTabHome = "$imageDir/icons_home.png";

@@ -1,12 +1,12 @@
 import 'dart:io' show Platform, exit;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ku_app/ui/home_screen.dart';
-import 'package:ku_app/ui/not_found_page.dart';
-import 'package:ku_app/ui/support_screen.dart';
-import 'package:ku_app/ui/voucher_screen.dart';
-import 'package:ku_app/ui/welcome_screen.dart';
-import 'package:ku_app/utils/uidata.dart';
+import 'package:KuApp/ui/home_screen.dart';
+import 'package:KuApp/ui/not_found_page.dart';
+import 'package:KuApp/ui/support_screen.dart';
+import 'package:KuApp/ui/voucher_screen.dart';
+import 'package:KuApp/ui/welcome_screen.dart';
+import 'package:KuApp/utils/uidata.dart';
 
 class DrawerItem {
   String title;
@@ -104,11 +104,11 @@ class MainState extends State<Main> {
                   .of(context)
                   .size
                   .width,
-              height: 220,
-              margin: EdgeInsets.only(top: 30),
+              height: 200,
+              margin: EdgeInsets.only(top: 50),
               child: Image.asset(
                 UIData.iconApp,
-                fit: BoxFit.cover,
+                fit: BoxFit.fitWidth,
               ),
             ),
             Column(children: drawerOptions)

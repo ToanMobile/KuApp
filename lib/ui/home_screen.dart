@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ku_app/ui/home_support_screen.dart';
-import 'package:ku_app/ui/not_found_page.dart';
-import 'package:ku_app/ui/voucher_screen.dart';
-import 'package:ku_app/utils/uidata.dart';
+import 'package:KuApp/ui/home_support_screen.dart';
+import 'package:KuApp/ui/not_found_page.dart';
+import 'package:KuApp/ui/voucher_screen.dart';
+import 'package:KuApp/utils/uidata.dart';
 
 import 'contact_screen.dart';
 import 'home_rss_screen.dart';

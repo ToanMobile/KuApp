@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ku_app/utils/uidata.dart';
+import 'package:KuApp/utils/uidata.dart';
 
 typedef ValidateFunc = bool Function(String);
 typedef GetTextCb = void Function(String);

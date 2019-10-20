@@ -1,4 +1,4 @@
-package com.ku_app
+package com.KuApp
 
 import android.os.Bundle
 

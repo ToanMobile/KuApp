@@ -1,4 +1,4 @@
-# ku_app
+# KuApp
 
 A new Flutter application.
 

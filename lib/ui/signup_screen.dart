@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ku_app/utils/uidata.dart';
-import 'package:ku_app/widget/filled_round_button.dart';
+import 'package:KuApp/utils/uidata.dart';
+import 'package:KuApp/widget/filled_round_button.dart';
 
 class SignUp extends StatelessWidget {
   //=> WebviewKuApp(Config.linkRegister);

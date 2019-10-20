@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ku_app/ui/main_screen.dart';
-import 'package:ku_app/ui/not_found_page.dart';
-import 'package:ku_app/utils/route_generator.dart';
-import 'package:ku_app/utils/uidata.dart';
+import 'package:KuApp/ui/main_screen.dart';
+import 'package:KuApp/ui/not_found_page.dart';
+import 'package:KuApp/utils/route_generator.dart';
+import 'package:KuApp/utils/uidata.dart';
 import 'utils/uidata.dart';
 
 void main() => runApp(MyApp());

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ku_app/data/service.dart';
-import 'package:ku_app/utils/uidata.dart';
-import 'package:ku_app/widget/filled_round_button.dart';
-import 'package:ku_app/widget/text_input_validation.dart';
+import 'package:KuApp/data/service.dart';
+import 'package:KuApp/utils/uidata.dart';
+import 'package:KuApp/widget/filled_round_button.dart';
+import 'package:KuApp/widget/text_input_validation.dart';
 
 class Voucher extends StatefulWidget {
   @override
