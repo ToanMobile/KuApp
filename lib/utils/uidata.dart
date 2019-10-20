@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 
 class AppSize {
   static final double leadingAppBarIcon = 28.0;
+
   //Avatar
   static final double avatarItemFriendSuggestionRadius = 25.0;
   static final double heightDivider = 3.0;
+
   // Button
   static final double loginButtonWidth = 500.0;
   static final double loginButtonHeight = 50.0;
@@ -29,13 +31,25 @@ class Margin {
 
 class UIData {
   //images
-  static const String imageDir            = "assets";
-  static const String iconApp               = "$imageDir/ic_launch.jpg";
+  static const String imageDir = "assets";
+  static const String iconApp = "$imageDir/ic_launch.jpg";
 
   //TABBAR
-  static const String iconTabHome             = "$imageDir/icons_home.png";
-  static const String iconTabVoucher             = "$imageDir/icons_discount.png";
-  static const String iconTabsupport             = "$imageDir/icons_headset.png";
+  static const String iconTabHome = "$imageDir/icons_home.png";
+  static const String iconTabVoucher = "$imageDir/icons_discount.png";
+  static const String iconTabsupport = "$imageDir/icons_headset.png";
+
+  //Support
+  static const String support1 = "$imageDir/support1.png";
+  static const String support2 = "$imageDir/support2.png";
+  static const String support3 = "$imageDir/support3.png";
+  static const String support4 = "$imageDir/support4.png";
+  static const String support5 = "$imageDir/support5.png";
+  static const String support6 = "$imageDir/support6.png";
+  static const String support7 = "$imageDir/support7.png";
+  static const String supportHome = "$imageDir/support_home.png";
+  static const String forget1 = "$imageDir/forget1.png";
+  static const String forget2 = "$imageDir/forget2.png";
 }
 
 class MyColors {
@@ -110,11 +124,11 @@ class StylesText {
       fontStyle: FontStyle.normal,
       fontSize: 28.0);
   static const headline3RightBold = const TextStyle(
-      color: Colors.black,
+      color: Colors.red,
       fontWeight: FontWeight.w700,
       fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
-      fontSize: 22.0);
+      fontSize: 20.0);
   static const headline3LeftBold = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w900,
@@ -379,12 +393,8 @@ class StylesText {
       fontFamily: "Roboto",
       fontStyle: FontStyle.normal,
       fontSize: 15.0);
-  static const body15LeftRegularSlate = const TextStyle(
-      color: Colors.black,
-      fontWeight: FontWeight.w400,
-      fontFamily: "Roboto",
-      fontStyle: FontStyle.normal,
-      fontSize: 15.0);
+  static const body15LeftRegularSlate =
+      const TextStyle(color: Colors.black, fontFamily: "Roboto", fontStyle: FontStyle.normal, fontSize: 16.0);
   static const body15LeftRegularWhite = const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w400,
@@ -543,7 +553,7 @@ class StylesText {
       fontSize: 10.0);
 }
 
-class Config{
+class Config {
   //App Font
   static const String defaultFont = "Roboto";
   static const linkHome = 'https://kucasino.ltd/';

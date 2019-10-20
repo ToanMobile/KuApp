@@ -4,6 +4,7 @@ import 'package:ku_app/ui/not_found_page.dart';
 import 'package:ku_app/ui/voucher_screen.dart';
 import 'package:ku_app/utils/uidata.dart';
 
+import 'contact_screen.dart';
 import 'home_rss_screen.dart';
 
 class Home extends StatefulWidget {
@@ -29,7 +30,7 @@ class HomeState extends State<Home> {
       case 1:
         return Voucher();
       case 2:
-        return HomeSupportScreen();
+        return Contact();
       default:
         return NotFoundPage();
     }

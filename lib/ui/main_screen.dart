@@ -116,7 +116,7 @@ class MainState extends State<Main> {
         ),
       ),
       body: _getDrawerItemWidget(_selectedDrawerIndex),
-      floatingActionButton: Padding(
+      /*floatingActionButton: Padding(
           padding: EdgeInsets.only(top: 50),
           child: FloatingActionButton.extended(
             elevation: 10,
@@ -127,7 +127,7 @@ class MainState extends State<Main> {
             label: Text("Trang chủ"),
           ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,*/
     );
   }
 }
