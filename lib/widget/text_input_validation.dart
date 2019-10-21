@@ -47,8 +47,8 @@ class _TextInputValidationState extends State<TextInputValidation> {
           child: Text(
             widget.validateErrMsg,
             style: TextStyle(
-              color: MyColors.black,
-              fontSize: 16.0,
+              color: MyColors.orangeRed,
+              fontSize: 14.0,
             ),
           ),
         ),

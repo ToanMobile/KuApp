@@ -20,6 +20,7 @@ class WebviewKuAppState extends State<WebviewKuApp> {
   final _key = UniqueKey();
   bool _isLoadingPage;
   Completer<WebViewController> _controller = Completer<WebViewController>();
+  WebViewController _webViewController;
 
   WebviewKuAppState(this.linkUrl);
 
@@ -39,11 +40,19 @@ class WebviewKuAppState extends State<WebviewKuApp> {
             initialUrl: linkUrl,
             onWebViewCreated: (WebViewController webViewController) {
               _controller.complete(webViewController);
+              _webViewController = webViewController;
             },
             onPageFinished: (String url) {
-              setState(() {
-                _isLoadingPage = false;
-              });
+              _webViewController.evaluateJavascript(
+                  "var elements = document.getElementsByClassName('bg_header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}");
+              _webViewController
+                  .evaluateJavascript(
+                      "var elements = document.getElementsByClassName('bg_header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}")
+                  .whenComplete(() => {
+                        setState(() {
+                          _isLoadingPage = false;
+                        }),
+                      });
               print('Page finished loading: $url');
             }),
         _isLoadingPage

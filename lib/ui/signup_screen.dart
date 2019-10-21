@@ -6,6 +6,7 @@ class SignUp extends StatelessWidget {
   //=> WebviewKUCasino.ldt(Config.linkRegister);
   @override
   Widget build(BuildContext context) {
+    Config.screenHome = true;
     return SingleChildScrollView(
       child: Container(
         padding: EdgeInsets.all(24.0),
