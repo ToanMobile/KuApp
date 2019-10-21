@@ -4,6 +4,8 @@ import 'package:KUCasino.ldt/widget/webview.dart';
 
 class Contact extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => WebviewKuApp(Config.linkContact);
-
+  Widget build(BuildContext context) {
+    Config.screenHome = false;
+    return WebviewKuApp(Config.linkContact);
+  }
 }

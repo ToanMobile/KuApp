@@ -12,15 +12,10 @@ class HomeLinkScreen extends StatefulWidget {
 class HomeLinkState extends State<HomeLinkScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          automaticallyImplyLeading: true,
-          title: Text('Trang chủ KUCasino.ldt'),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context, false),
-          )),
-      body: WebviewKuApp(Config.linkHome),
+    return Container(
+      color: Colors.white,
+      padding: EdgeInsets.only(top: 30),
+      child: WebviewKuApp(Config.linkHome),
     );
   }
 }

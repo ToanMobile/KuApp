@@ -51,9 +51,7 @@ class WebviewKuAppState extends State<WebviewKuApp> {
                 alignment: FractionalOffset.center,
                 child: CircularProgressIndicator(),
               )
-            : Container(
-                color: Colors.transparent,
-              ),
+            : Text(''),
       ],
     );
   }

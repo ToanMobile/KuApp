@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:KUCasino.ldt/utils/uidata.dart';
 import 'package:KUCasino.ldt/widget/filled_round_button.dart';
-import 'package:KUCasino.ldt/widget/webview.dart';
 
 class HomeRssScreen extends StatefulWidget {
   @override
@@ -11,8 +10,10 @@ class HomeRssScreen extends StatefulWidget {
 }
 
 class HomeRssState extends State<HomeRssScreen> {
+
   @override
   Widget build(BuildContext context) {
+    Config.screenHome = true;
     return Container(
       child: Center(
         child: Column(
@@ -30,7 +31,7 @@ class HomeRssState extends State<HomeRssScreen> {
               ),
             ),
           ],
-        )
+        ),
       ),
     );
   }

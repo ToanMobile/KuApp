@@ -7,6 +7,7 @@ class LState {
   static Map<String, int> dateToColumn = new Map();
   static int userRow = 0;
 
+
   Future<String> readUserFromPreferences() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String username = prefs.getString(USERNAME_KEY);

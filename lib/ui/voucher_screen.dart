@@ -24,6 +24,7 @@ class VoucherState extends State<Voucher> {
 
   @override
   Widget build(BuildContext context) {
+    Config.screenHome = false;
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -66,14 +67,14 @@ class VoucherState extends State<Voucher> {
               ),
               _isDone
                   ? Container(
-                      width: AppSize.loginButtonWidth,
-                      height: AppSize.loginButtonHeight,
-                      child: FilledRoundButton.withGradient(
-                        gradientColor: MyColors.redMedium_tanHide_gradient,
-                        text: Text("Gửi", style: StylesText.tagLine15SemiBoldWhite),
-                        cb: () => saveData(context),
-                      ),
-                    )
+                width: AppSize.loginButtonWidth,
+                height: AppSize.loginButtonHeight,
+                child: FilledRoundButton.withGradient(
+                  gradientColor: MyColors.redMedium_tanHide_gradient,
+                  text: Text("Gửi", style: StylesText.tagLine15SemiBoldWhite),
+                  cb: () => saveData(context),
+                ),
+              )
                   : CircularProgressIndicator()
             ],
           ),

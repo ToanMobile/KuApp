@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:KUCasino.ldt/ui/forget_pass_webview_screen.dart';
 import 'package:KUCasino.ldt/ui/home_link_screen.dart';
 import 'package:KUCasino.ldt/ui/not_found_page.dart';
+import 'package:KUCasino.ldt/ui/main_screen.dart';
 
 class RouteGenerator {
   static Route authorizedRoute(RouteSettings settings) {
     switch (settings.name) {
+      case '/Main':
+        return _buildRoute(settings, Main());
       case '/home':
         return _buildRoute(settings, HomeLinkScreen());
       case '/register':

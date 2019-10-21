@@ -90,33 +90,30 @@ class MainState extends State<Main> {
       ));
     }
     return Scaffold(
-      appBar: AppBar(
-        // here we display the title corresponding to the fragment
-        // you can instead choose to have a static title
-        title: Text(widget.drawerItems[_selectedDrawerIndex].title),
-      ),
-      drawer: Drawer(
-        child: Column(
-          children: <Widget>[
-            Container(
-              color: Colors.white,
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width,
-              height: 200,
-              margin: EdgeInsets.only(top: 50),
-              child: Image.asset(
-                UIData.iconApp,
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-            Column(children: drawerOptions)
-          ],
+        appBar: AppBar(
+          // here we display the title corresponding to the fragment
+          // you can instead choose to have a static title
+          title: Text(widget.drawerItems[_selectedDrawerIndex].title),
         ),
-      ),
-      body: _getDrawerItemWidget(_selectedDrawerIndex),
-      /*floatingActionButton: Padding(
+        drawer: Drawer(
+          child: Column(
+            children: <Widget>[
+              Container(
+                color: Colors.white,
+                width: MediaQuery.of(context).size.width,
+                height: 200,
+                margin: EdgeInsets.only(top: 50),
+                child: Image.asset(
+                  UIData.iconApp,
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+              Column(children: drawerOptions)
+            ],
+          ),
+        ),
+        body: _getDrawerItemWidget(_selectedDrawerIndex),
+        /*floatingActionButton: Padding(
           padding: EdgeInsets.only(top: 50),
           child: FloatingActionButton.extended(
             elevation: 10,
