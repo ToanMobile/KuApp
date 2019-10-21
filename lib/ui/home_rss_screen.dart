@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/utils/uidata.dart';
-import 'package:KuApp/widget/filled_round_button.dart';
-import 'package:KuApp/widget/webview.dart';
+import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino.ldt/widget/filled_round_button.dart';
+import 'package:KUCasino.ldt/widget/webview.dart';
 
 class HomeRssScreen extends StatefulWidget {
   @override

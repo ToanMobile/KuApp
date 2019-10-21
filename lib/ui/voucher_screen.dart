@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/data/service.dart';
-import 'package:KuApp/utils/uidata.dart';
-import 'package:KuApp/widget/filled_round_button.dart';
-import 'package:KuApp/widget/text_input_validation.dart';
+import 'package:KUCasino.ldt/data/service.dart';
+import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino.ldt/widget/filled_round_button.dart';
+import 'package:KUCasino.ldt/widget/text_input_validation.dart';
 
 class Voucher extends StatefulWidget {
   @override
@@ -10,8 +10,8 @@ class Voucher extends StatefulWidget {
 }
 
 class VoucherState extends State<Voucher> {
-  bool isNameInputValid = true, isSdtInputValid = true;
-  String nameInputValidateErr = "", sdtInputValidateErr = "";
+  bool isNameInputValid = true, isSdtInputValid = true, isTKInputValid = true;
+  String nameInputValidateErr = "", sdtInputValidateErr = "", tkInputValidateErr = "";
   bool _isDone = true;
 
   TextEditingController nameController = new TextEditingController(),
@@ -24,79 +24,66 @@ class VoucherState extends State<Voucher> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Padding(
-        padding: EdgeInsets.all(Margin.marginApp),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            TextInputValidation(
-              controller: nameController,
-              hintText: "Họ và tên",
-              validateErrMsg: getEmailValidateErrMsg(),
-              isInputValid: isNameInputValid,
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
-            TextInputValidation(
-              controller: sdtController,
-              hintText: "Số điện thoại đăng ký",
-              validateErrMsg: getPwdValidateErrMsg(),
-              isInputValid: isSdtInputValid,
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
-            TextInputValidation(
-              controller: tkController,
-              hintText: "Tên tài khoản KU",
-              validateErrMsg: getPwdValidateErrMsg(),
-              isInputValid: isNameInputValid,
-            ),
-            const SizedBox(
-              height: 30.0,
-            ),
-            _isDone
-                ? Container(
-                    width: AppSize.loginButtonWidth,
-                    height: AppSize.loginButtonHeight,
-                    child: FilledRoundButton.withGradient(
-                      gradientColor: MyColors.redMedium_tanHide_gradient,
-                      text:
-                          Text("Gửi", style: StylesText.tagLine15SemiBoldWhite),
-                      cb: () => saveData(context),
-                    ),
-                  )
-                : CircularProgressIndicator()
-          ],
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(Margin.marginApp),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              TextInputValidation(
+                controller: nameController,
+                hintText: "Họ và tên",
+                validateErrMsg: getNameValidateErrMsg(),
+                isInputValid: isNameInputValid,
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              TextInputValidation(
+                controller: sdtController,
+                hintText: "Số điện thoại đăng ký",
+                validateErrMsg: getSDTValidateErrMsg(),
+                isInputValid: isSdtInputValid,
+                isInputNumber: true,
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              TextInputValidation(
+                controller: tkController,
+                hintText: "Tên tài khoản KU",
+                validateErrMsg: getTKValidateErrMsg(),
+                isInputValid: isTKInputValid,
+                isInputNumber: true,
+              ),
+              const SizedBox(
+                height: 30.0,
+              ),
+              _isDone
+                  ? Container(
+                      width: AppSize.loginButtonWidth,
+                      height: AppSize.loginButtonHeight,
+                      child: FilledRoundButton.withGradient(
+                        gradientColor: MyColors.redMedium_tanHide_gradient,
+                        text: Text("Gửi", style: StylesText.tagLine15SemiBoldWhite),
+                        cb: () => saveData(context),
+                      ),
+                    )
+                  : CircularProgressIndicator()
+            ],
+          ),
         ),
       ),
     );
   }
 
   saveData(BuildContext context) {
-    if (nameController.text.isNotEmpty &&
-        sdtController.text.isNotEmpty &&
-        tkController.text.isNotEmpty) {
-      setSendData(false);
-      LService.saveSignUp(
-              nameController.text, sdtController.text, tkController.text)
-          .then((value) {
-        print('then' + value.toString());
-        if (value) {
-          showDone(context, true);
-        } else {
-          showDone(context, false);
-        }
-      }).catchError((e) {
-        print('catchError');
-        showDone(context, false);
-      });
-    } else {
-      showEmty(context);
-    }
+    validateForm();
     /*
     //TODO GET Data google SHEET
     LService.getData().then((list) {
@@ -158,28 +145,53 @@ class VoucherState extends State<Voucher> {
 
   void validateForm() {
     isNameInputValid = notBlank(nameController.text);
-    isSdtInputValid = notBlank(tkController.text);
-
-    if (isNameInputValid && isSdtInputValid) {
-      // TODO: Call API here
+    isSdtInputValid = notBlank(sdtController.text) && sdtController.text.length == 10;
+    isTKInputValid = notBlank(tkController.text) && (tkController.text.length > 3 && tkController.text.length < 11);
+    if (isNameInputValid && isSdtInputValid && isTKInputValid) {
+      setSendData(false);
+      LService.saveSignUp(nameController.text, sdtController.text, tkController.text).then((value) {
+        print('then' + value.toString());
+        if (value) {
+          showDone(context, true);
+        } else {
+          showDone(context, false);
+        }
+      }).catchError((e) {
+        print('catchError');
+        showDone(context, false);
+      });
     } else {
-      setState(() {});
+      showEmty(context);
     }
   }
 
-  String getEmailValidateErrMsg() {
-    // TODO: using switch case to get another validate message type
+  String getNameValidateErrMsg() {
     if (!isNameInputValid) {
-      return "This field can not blank!";
+      return "Không được để trống!";
     }
-    return null;
+    return "";
   }
 
-  String getPwdValidateErrMsg() {
+  String getSDTValidateErrMsg() {
     if (!isSdtInputValid) {
-      return "This field can not blank!";
+      if (sdtController.text.length == 0) {
+        return "Không được để trống!";
+      } else if (sdtController.text.length != 10) {
+        return "Vui lòng nhập số điện thoại(10 chữ số)!";
+      }
     }
-    return null;
+    return "";
+  }
+
+  String getTKValidateErrMsg() {
+    if (!isTKInputValid) {
+      if (tkController.text.length == 0) {
+        return "Không được để trống!";
+      } else if (tkController.text.length < 4 || tkController.text.length > 10) {
+        return "Vui lòng nhập số tài khoản(4-10 chữ số)!";
+      }
+    }
+    return "";
   }
 
   @override

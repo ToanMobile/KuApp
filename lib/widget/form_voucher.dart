@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/utils/uidata.dart';
-import 'package:KuApp/widget/text_input_validation.dart';
+import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino.ldt/widget/text_input_validation.dart';
 import 'filled_round_button.dart';
 
 class FormVoucher extends StatefulWidget {

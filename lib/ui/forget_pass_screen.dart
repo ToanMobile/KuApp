@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/utils/uidata.dart';
-import 'package:KuApp/widget/filled_round_button.dart';
+import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino.ldt/widget/filled_round_button.dart';
 
 class ForgetPass extends StatelessWidget {
   // This widget is the root of your application.

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/ui/forget_pass_webview_screen.dart';
-import 'package:KuApp/ui/home_link_screen.dart';
-import 'package:KuApp/ui/not_found_page.dart';
+import 'package:KUCasino.ldt/ui/forget_pass_webview_screen.dart';
+import 'package:KUCasino.ldt/ui/home_link_screen.dart';
+import 'package:KUCasino.ldt/ui/not_found_page.dart';
 
 class RouteGenerator {
   static Route authorizedRoute(RouteSettings settings) {

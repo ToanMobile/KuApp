@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KuApp/utils/uidata.dart';
+import 'package:KUCasino.ldt/utils/uidata.dart';
 
 typedef ValidateFunc = bool Function(String);
 typedef GetTextCb = void Function(String);
@@ -11,6 +11,7 @@ class TextInputValidation extends StatefulWidget {
   final TextEditingController controller;
 
   final bool isInputValid;
+  final bool isInputNumber;
   final bool isTransparent;
   final String validateErrMsg;
 
@@ -18,6 +19,7 @@ class TextInputValidation extends StatefulWidget {
       {this.hintText = "",
       this.validateErrMsg,
       this.controller,
+      this.isInputNumber = false,
       this.isInputValid = false,
       this.isTransparent = false});
 
@@ -58,6 +60,7 @@ class _TextInputValidationState extends State<TextInputValidation> {
     return CupertinoTextField(
       controller: widget.controller,
       placeholder: widget.hintText,
+      keyboardType: widget.isInputNumber? TextInputType.numberWithOptions(decimal: true) : TextInputType.text,
       placeholderStyle: TextStyle(
         color: MyColors.blueGrey,
         fontSize: 18.0,
@@ -68,7 +71,9 @@ class _TextInputValidationState extends State<TextInputValidation> {
         horizontal: 20.0,
       ),
       suffixMode: OverlayVisibilityMode.editing,
-      decoration: BoxDecoration(color: widget.isTransparent ? MyColors.transparent : MyColors.veryLightPink, borderRadius: BorderRadius.circular(30.0)),
+      decoration: BoxDecoration(
+          color: widget.isTransparent ? MyColors.transparent : MyColors.veryLightPink,
+          borderRadius: BorderRadius.circular(30.0)),
       cursorColor: MyColors.black,
     );
   }

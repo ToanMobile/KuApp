@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/utils/uidata.dart';
-import 'package:KuApp/widget/webview.dart';
+import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino.ldt/widget/webview.dart';
 
 class HomeLinkScreen extends StatefulWidget {
   @override
@@ -15,7 +15,7 @@ class HomeLinkState extends State<HomeLinkScreen> {
     return Scaffold(
       appBar: AppBar(
           automaticallyImplyLeading: true,
-          title: Text('Trang chủ KuApp'),
+          title: Text('Trang chủ KUCasino.ldt'),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context, false),

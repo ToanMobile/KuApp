@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/ui/main_screen.dart';
-import 'package:KuApp/ui/not_found_page.dart';
-import 'package:KuApp/utils/route_generator.dart';
-import 'package:KuApp/utils/uidata.dart';
+import 'package:KUCasino.ldt/ui/main_screen.dart';
+import 'package:KUCasino.ldt/ui/not_found_page.dart';
+import 'package:KUCasino.ldt/utils/route_generator.dart';
+import 'package:KUCasino.ldt/utils/uidata.dart';
 import 'utils/uidata.dart';
 
 void main() => runApp(MyApp());
@@ -19,6 +19,11 @@ class MyApp extends StatelessWidget {
             primaryColor: Colors.white,
             appBarTheme: AppBarTheme(
               color: Colors.lightBlueAccent
+            ),
+            primaryTextTheme: TextTheme(
+                title: TextStyle(
+                    color: Colors.white
+                )
             ),
             iconTheme: IconThemeData(color: Colors.white, size: 28),
             backgroundColor: Colors.white,

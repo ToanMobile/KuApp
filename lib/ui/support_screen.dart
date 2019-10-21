@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/ui/contact_screen.dart';
-import 'package:KuApp/ui/forget_pass_screen.dart';
-import 'package:KuApp/ui/signup_screen.dart';
+import 'package:KUCasino.ldt/ui/contact_screen.dart';
+import 'package:KUCasino.ldt/ui/forget_pass_screen.dart';
+import 'package:KUCasino.ldt/ui/signup_screen.dart';
 
 import 'not_found_page.dart';
 

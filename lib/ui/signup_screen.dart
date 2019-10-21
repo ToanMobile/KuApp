@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/utils/uidata.dart';
-import 'package:KuApp/widget/filled_round_button.dart';
+import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino.ldt/widget/filled_round_button.dart';
 
 class SignUp extends StatelessWidget {
-  //=> WebviewKuApp(Config.linkRegister);
+  //=> WebviewKUCasino.ldt(Config.linkRegister);
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -21,7 +21,7 @@ class SignUp extends StatelessWidget {
               height: 10,
             ),
             Text(
-                'Các bước để tham gia đặt cược lô đề, thể thao, tài xỉu,... Đầu tiên bạn cần có 1 tài khoản để đăng nhập và tham gia chơi các trò chơi tại đây.\nChúng tôi quy định “Một khách chỉ được sử dụng một tài khoản”, nếu bạn đã tạo nhiều tài khoản, vui lòng đăng nhập vào tài khoản đầu tiên hoặc lấy lại mật khẩu (trong mục Quên Mật Khẩu) nếu bạn quên. Hướng dẫn lấy lại mật khẩu tại đây\nĐiều kiện để tham gia: Đủ 18 tuổi.\nBạn cần chuẩn bị:\n-	1 Số điện thoại\n-	1 Tài khoản ngân hàng (tốt nhất có đăng ký Internet banking hoặc Mobile banking)\nSau đó, làm theo hướng dẫn chi tiết sau để đăng ký cho mình một tài khoản\nBước 1: Chọn vào mục Trang Chủ'),
+                'Các bước để tham gia chơi... Đầu tiên bạn cần có 1 tài khoản để đăng nhập và tham gia chơi các trò chơi tại đây.\nChúng tôi quy định “Một khách chỉ được sử dụng một tài khoản”, nếu bạn đã tạo nhiều tài khoản, vui lòng đăng nhập vào tài khoản đầu tiên hoặc lấy lại mật khẩu (trong mục Quên Mật Khẩu) nếu bạn quên.\nĐiều kiện để tham gia: Đủ 18 tuổi.\nBạn cần chuẩn bị:\n-	1 Số điện thoại\n-	1 Tài khoản ngân hàng (tốt nhất có đăng ký Internet banking hoặc Mobile banking)\nSau đó, làm theo hướng dẫn chi tiết sau để đăng ký cho mình một tài khoản\nBước 1: Chọn vào mục Trang Chủ'),
             const SizedBox(
               height: 10,
             ),
@@ -63,7 +63,7 @@ class SignUp extends StatelessWidget {
               height: 10,
             ),
             Text(
-                'Bước 3: Điền thông tin theo hình.\nLưu ý: bên KU không tuyển đại lý VN. Nên mã đại lý FF379 (số thần tài) đây là để  nhận biết quý khách đã đăng ký khuyến mãi của KU. Và sẽ được nhận hỗ trợ VIP từ KU. Qúy khách vui lòng giữ nguyên mã đại lý FF379 khi đăng ký trên app. Hoặc điền FF379 vào nếu không xuất hiện.\nTên đăng nhập: Gồm tối đa 10 ký tự và tối thiểu 4 ký tự. Viết liền nhau không dấu cách.\nBiệt danh: Bạn có thể lấy biệt danh bất kì khi đăng ký.\nMật khẩu: Mật khẩu tùy ý bạn chọn, tuy nhiên nên dễ nhớ.\nCuối cùng, bấm ” Xác nhận”'),
+                'Bước 3: Điền thông tin theo hình.\nLưu ý: bên KU không tuyển đại lý VN. Nên mã đại lý FF379 (số thần tài) đây là để  nhận biết quý khách đã đăng ký khuyến mãi của KU. Và sẽ được nhận hỗ trợ VIP từ KU. Qúy khách vui lòng giữ nguyên mã đại lý FF379 khi đăng ký trên app. Hoặc điền FF379 vào nếu không xuất hiện.'),
             const SizedBox(
               height: 10,
             ),

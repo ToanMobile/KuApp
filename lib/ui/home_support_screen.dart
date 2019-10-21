@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:KuApp/utils/uidata.dart';
-import 'package:KuApp/widget/webview.dart';
+import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino.ldt/widget/webview.dart';
 
 class HomeSupportScreen extends StatefulWidget {
   @override
@@ -12,5 +12,5 @@ class HomeSupportScreen extends StatefulWidget {
 class HomeSupportState extends State<HomeSupportScreen> {
 
   @override
-  Widget build(BuildContext context) => WebviewKuApp(Config.linkHomeSupport);
+  Widget build(BuildContext context) => WebviewKuApp(Config.linkSupport);
 }
