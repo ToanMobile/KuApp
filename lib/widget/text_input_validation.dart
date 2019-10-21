@@ -1,6 +1,6 @@
+import 'package:KUCasino.ldt/utils/uidata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KUCasino.ldt/utils/uidata.dart';
 
 typedef ValidateFunc = bool Function(String);
 typedef GetTextCb = void Function(String);

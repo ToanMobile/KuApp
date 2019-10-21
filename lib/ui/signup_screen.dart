@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:KUCasino.ldt/utils/uidata.dart';
 import 'package:KUCasino.ldt/widget/filled_round_button.dart';
+import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
   //=> WebviewKUCasino.ldt(Config.linkRegister);

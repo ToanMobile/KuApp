@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:KUCasino.ldt/ui/main_screen.dart';
 import 'package:KUCasino.ldt/ui/not_found_page.dart';
 import 'package:KUCasino.ldt/utils/route_generator.dart';
 import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:flutter/material.dart';
+
 import 'utils/uidata.dart';
 
 void main() => runApp(MyApp());

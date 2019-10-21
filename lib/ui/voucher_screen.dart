@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:KUCasino.ldt/data/service.dart';
 import 'package:KUCasino.ldt/utils/uidata.dart';
 import 'package:KUCasino.ldt/widget/filled_round_button.dart';
 import 'package:KUCasino.ldt/widget/text_input_validation.dart';
+import 'package:flutter/material.dart';
 
 class Voucher extends StatefulWidget {
   @override
@@ -67,14 +67,14 @@ class VoucherState extends State<Voucher> {
               ),
               _isDone
                   ? Container(
-                width: AppSize.loginButtonWidth,
-                height: AppSize.loginButtonHeight,
-                child: FilledRoundButton.withGradient(
-                  gradientColor: MyColors.redMedium_tanHide_gradient,
-                  text: Text("Gửi", style: StylesText.tagLine15SemiBoldWhite),
-                  cb: () => saveData(context),
-                ),
-              )
+                      width: AppSize.loginButtonWidth,
+                      height: AppSize.loginButtonHeight,
+                      child: FilledRoundButton.withGradient(
+                        gradientColor: MyColors.redMedium_tanHide_gradient,
+                        text: Text("Gửi", style: StylesText.tagLine15SemiBoldWhite),
+                        cb: () => saveData(context),
+                      ),
+                    )
                   : CircularProgressIndicator()
             ],
           ),
@@ -144,10 +144,19 @@ class VoucherState extends State<Voucher> {
 
   bool notBlank(String input) => input.length != 0;
 
+  bool _isNumeric(String str) {
+    if (str == null) {
+      return false;
+    }
+    return double.tryParse(str) != null;
+  }
+
   void validateForm() {
     isNameInputValid = notBlank(nameController.text);
-    isSdtInputValid = notBlank(sdtController.text) && sdtController.text.length == 10;
-    isTKInputValid = notBlank(tkController.text) && (tkController.text.length > 3 && tkController.text.length < 11);
+    isSdtInputValid = notBlank(sdtController.text) && sdtController.text.length == 10 && _isNumeric(sdtController.text);
+    isTKInputValid = notBlank(tkController.text) &&
+        (tkController.text.length > 3 && tkController.text.length < 11) &&
+        _isNumeric(tkController.text);
     if (isNameInputValid && isSdtInputValid && isTKInputValid) {
       setSendData(false);
       LService.saveSignUp(nameController.text, sdtController.text, tkController.text).then((value) {
@@ -179,6 +188,8 @@ class VoucherState extends State<Voucher> {
         return "Không được để trống!";
       } else if (sdtController.text.length != 10) {
         return "Vui lòng nhập số điện thoại(10 chữ số)!";
+      } else if (!_isNumeric(sdtController.text)) {
+        return "Chỉ được nhập số!";
       }
     }
     return "";
@@ -190,6 +201,8 @@ class VoucherState extends State<Voucher> {
         return "Không được để trống!";
       } else if (tkController.text.length < 4 || tkController.text.length > 10) {
         return "Vui lòng nhập số tài khoản(4-10 chữ số)!";
+      } else if (!_isNumeric(tkController.text)) {
+        return "Chỉ được nhập số!";
       }
     }
     return "";

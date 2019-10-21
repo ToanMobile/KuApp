@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:KUCasino.ldt/utils/uidata.dart';
 import 'package:KUCasino.ldt/widget/webview.dart';
+import 'package:flutter/material.dart';
 
 class HomeLinkScreen extends StatefulWidget {
   @override
@@ -15,7 +15,7 @@ class HomeLinkState extends State<HomeLinkScreen> {
     return Container(
       color: Colors.white,
       padding: EdgeInsets.only(top: 30),
-      child: WebviewKuApp(Config.linkHome),
+      child: WebviewKuApp(Config.linkHome, true),
     );
   }
 }
