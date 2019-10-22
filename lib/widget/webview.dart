@@ -20,6 +20,15 @@ class WebviewKuAppState extends State<WebviewKuApp> {
   Completer<WebViewController> _controller = Completer<WebViewController>();
   WebViewController _webViewController;
 
+  Future<bool> _onWillPop(BuildContext context) async {
+    if (await _webViewController.canGoBack()) {
+      _webViewController.goBack();
+    } else {
+      print("onwill goback1111");
+      Navigator.pop(context);
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -28,49 +37,52 @@ class WebviewKuAppState extends State<WebviewKuApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        WebView(
-            key: _key,
-            javascriptMode: JavascriptMode.unrestricted,
-            initialUrl: widget.linkUrl,
-            onWebViewCreated: (WebViewController webViewController) {
-              _controller.complete(webViewController);
-              _webViewController = webViewController;
-            },
-            onPageFinished: (String url) {
-              if (widget.isHome) {
-                _webViewController.evaluateJavascript(
-                    "var elements = document.getElementsByClassName('mobile-header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}");
-                _webViewController
-                    .evaluateJavascript(
-                        "var elements = document.getElementsByClassName('mobile-header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}")
-                    .whenComplete(
-                      () => setState(() {
-                        _isLoadingPage = false;
-                      }),
-                    );
-              } else {
-                _webViewController.evaluateJavascript(
-                    "var elements = document.getElementsByClassName('bg_header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}");
-                _webViewController
-                    .evaluateJavascript(
-                        "var elements = document.getElementsByClassName('bg_header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}")
-                    .whenComplete(
-                      () => setState(() {
-                        _isLoadingPage = false;
-                      }),
-                    );
-              }
-              print('Page finished loading: $url');
-            }),
-        _isLoadingPage
-            ? Container(
-                alignment: FractionalOffset.center,
-                child: CircularProgressIndicator(),
-              )
-            : Text(''),
-      ],
+    return WillPopScope(
+      onWillPop: () => _onWillPop(context),
+      child: Stack(
+        children: <Widget>[
+          WebView(
+              key: _key,
+              javascriptMode: JavascriptMode.unrestricted,
+              initialUrl: widget.linkUrl,
+              onWebViewCreated: (WebViewController webViewController) {
+                _controller.complete(webViewController);
+                _webViewController = webViewController;
+              },
+              onPageFinished: (String url) {
+                if (widget.isHome) {
+                  _webViewController.evaluateJavascript(
+                      "var elements = document.getElementsByClassName('mobile-header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}");
+                  _webViewController
+                      .evaluateJavascript(
+                          "var elements = document.getElementsByClassName('mobile-header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}")
+                      .whenComplete(
+                        () => setState(() {
+                          _isLoadingPage = false;
+                        }),
+                      );
+                } else {
+                  _webViewController.evaluateJavascript(
+                      "var elements = document.getElementsByClassName('bg_header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}");
+                  _webViewController
+                      .evaluateJavascript(
+                          "var elements = document.getElementsByClassName('bg_header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}")
+                      .whenComplete(
+                        () => setState(() {
+                          _isLoadingPage = false;
+                        }),
+                      );
+                }
+                print('Page finished loading: $url');
+              }),
+          _isLoadingPage
+              ? Container(
+                  alignment: FractionalOffset.center,
+                  child: CircularProgressIndicator(),
+                )
+              : Text(''),
+        ],
+      ),
     );
   }
 }
