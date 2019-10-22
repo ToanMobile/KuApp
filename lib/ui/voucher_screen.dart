@@ -47,7 +47,7 @@ class VoucherState extends State<Voucher> {
               ),
               TextInputValidation(
                 controller: sdtController,
-                hintText: "Số điện thoại đăng ký",
+                hintText: "Số điện thoại hoặc Zalo",
                 validateErrMsg: getSDTValidateErrMsg(),
                 isInputValid: isSdtInputValid,
                 isInputNumber: true,
@@ -59,8 +59,7 @@ class VoucherState extends State<Voucher> {
                 controller: tkController,
                 hintText: "Tên tài khoản KU",
                 validateErrMsg: getTKValidateErrMsg(),
-                isInputValid: isTKInputValid,
-                isInputNumber: true,
+                isInputValid: isTKInputValid
               ),
               const SizedBox(
                 height: 30.0,
@@ -155,8 +154,7 @@ class VoucherState extends State<Voucher> {
     isNameInputValid = notBlank(nameController.text);
     isSdtInputValid = notBlank(sdtController.text) && sdtController.text.length == 10 && _isNumeric(sdtController.text);
     isTKInputValid = notBlank(tkController.text) &&
-        (tkController.text.length > 3 && tkController.text.length < 11) &&
-        _isNumeric(tkController.text);
+        (tkController.text.length > 3 && tkController.text.length < 11);
     if (isNameInputValid && isSdtInputValid && isTKInputValid) {
       setSendData(false);
       LService.saveSignUp(nameController.text, sdtController.text, tkController.text).then((value) {
@@ -201,8 +199,6 @@ class VoucherState extends State<Voucher> {
         return "Không được để trống!";
       } else if (tkController.text.length < 4 || tkController.text.length > 10) {
         return "Vui lòng nhập số tài khoản(4-10 chữ số)!";
-      } else if (!_isNumeric(tkController.text)) {
-        return "Chỉ được nhập số!";
       }
     }
     return "";

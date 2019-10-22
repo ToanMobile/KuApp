@@ -562,7 +562,7 @@ class Config {
   static const linkForgetPass = 'https://ku.ku999.net/Mobile/Member/ForgetPwd';
   static const linkContact = 'https://ku.ku999.net/Mobile/Member/ServiceCenter';
   static const linkRss = 'https://news.google.com/rss?hl=vi&gl=VN&ceid=VN:vi';
-  static const linkHomeSupport = 'https://tawk.to/chat/5daae32778ab74187a5a70a7/default';
+  static const linkHomeSupport = 'https://kucasino.ltd/support/';
   static const linkSupport = 'https://kucasino.ltd/support/';
   static bool screenHome = true;
 }

@@ -12,5 +12,5 @@ class HomeSupportScreen extends StatefulWidget {
 class HomeSupportState extends State<HomeSupportScreen> {
 
   @override
-  Widget build(BuildContext context) => WebviewKuApp(Config.linkSupport, false);
+  Widget build(BuildContext context) => WebviewKuApp(Config.linkHomeSupport, true);
 }
