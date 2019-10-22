@@ -1,4 +1,3 @@
-import 'package:KUCasino.ldt/ui/home_support_screen.dart';
 import 'package:KUCasino.ldt/ui/not_found_page.dart';
 import 'package:KUCasino.ldt/ui/voucher_screen.dart';
 import 'package:KUCasino.ldt/utils/uidata.dart';
@@ -36,7 +35,9 @@ class HomeState extends State<Home> {
     }
   }
 
-  Future<bool> _onWillPop() {
+  Future<bool> _onWillPop(BuildContext context) {
+    print('Home_onWillPop==' + Navigator.canPop(context).toString());
+    print('Home_onWillPop111==' + Navigator.defaultRouteName);
     if (Config.screenHome) {
       return showDialog(
             context: context,
@@ -56,9 +57,11 @@ class HomeState extends State<Home> {
             ),
           ) ??
           false;
-    } else {
+    } else if (Config.linkUrl == Config.linkSupport) {
       _onItemTapped(0);
       return Future.value(false);
+    } else {
+      return Future.value(true);
     }
   }
 
@@ -66,7 +69,7 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        return await _onWillPop();
+        return await _onWillPop(context);
       },
       child: Scaffold(
         body: _getBottomItemWidget(_selectedBottomIndex),

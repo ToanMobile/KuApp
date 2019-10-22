@@ -565,4 +565,5 @@ class Config {
   static const linkHomeSupport = 'https://kucasino.ltd/support/';
   static const linkSupport = 'https://kucasino.ltd/support/';
   static bool screenHome = true;
+  static String linkUrl = '';
 }

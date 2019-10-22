@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:KUCasino.ldt/utils/uidata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -22,6 +23,7 @@ class WebviewKuAppState extends State<WebviewKuApp> {
 
   Future<bool> _onWillPop(BuildContext context) async {
     if (await _webViewController.canGoBack()) {
+      print("onwill goback");
       _webViewController.goBack();
     } else {
       print("onwill goback1111");
@@ -73,6 +75,7 @@ class WebviewKuAppState extends State<WebviewKuApp> {
                         }),
                       );
                 }
+                Config.linkUrl = url;
                 print('Page finished loading: $url');
               }),
           _isLoadingPage

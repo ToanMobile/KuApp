@@ -151,37 +151,26 @@ class VoucherState extends State<Voucher> {
   }
 
   void validateForm() {
-//    isNameInputValid = notBlank(nameController.text);
-//    isSdtInputValid = notBlank(sdtController.text) && sdtController.text.length == 10 && _isNumeric(sdtController.text);
-//    isTKInputValid = notBlank(tkController.text) &&
-//        (tkController.text.length > 3 && tkController.text.length < 11);
-//    if (isNameInputValid && isSdtInputValid && isTKInputValid) {
-//      setSendData(false);
-//      LService.saveSignUp(nameController.text.toString(), sdtController.text.toString(), tkController.text.toString()).then((value) {
-//        print('then===' + value.toString());
-//        if (value) {
-//          showDone(context, true);
-//        } else {
-//          showDone(context, false);
-//        }
-//      }).catchError((e) {
-//        print(e);
-//        showDone(context, false);
-//      });
-//    } else {
-//      showEmty(context);
-//    }
-    LService.saveSignUp(nameController.text.toString(), sdtController.text.toString(), tkController.text.toString()).then((value) {
-      print('then===' + value.toString());
-      if (value) {
-        showDone(context, true);
-      } else {
+    isNameInputValid = notBlank(nameController.text);
+    isSdtInputValid = notBlank(sdtController.text) && sdtController.text.length == 10 && _isNumeric(sdtController.text);
+    isTKInputValid = notBlank(tkController.text) &&
+        (tkController.text.length > 3 && tkController.text.length < 11);
+    if (isNameInputValid && isSdtInputValid && isTKInputValid) {
+      setSendData(false);
+      LService.saveSignUp(nameController.text.toString(), sdtController.text.toString(), tkController.text.toString()).then((value) {
+        print('then===' + value.toString());
+        if (value) {
+          showDone(context, true);
+        } else {
+          showDone(context, false);
+        }
+      }).catchError((e) {
+        print(e);
         showDone(context, false);
-      }
-    }).catchError((e) {
-      print(e);
-      showDone(context, false);
-    });
+      });
+    } else {
+      showEmty(context);
+    }
   }
 
   String getNameValidateErrMsg() {

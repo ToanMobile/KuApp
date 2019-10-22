@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 class ContactWebview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Config.screenHome = false;
-    return WebviewKuApp(Config.linkContact, false);
+    return Container(
+      color: Colors.white,
+      padding: EdgeInsets.only(top: 30),
+      child: WebviewKuApp(Config.linkHomeSupport, true),
+    );
   }
 }

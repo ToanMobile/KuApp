@@ -35,7 +35,7 @@ class LService {
     var api = sheets.SheetsApi(client);
     sheets.ValueRange range = sheets.ValueRange();
     List<String> listData = new List();
-    var time = DateFormat("dd-MM-yyyy hh:mm a").format(DateTime.now().toUtc());
+    var time = DateFormat("dd-MM-yyyy hh:mm a").format(DateTime.now());
     print(time.toString());
     listData.add(time.toString());
     listData.add(name);
