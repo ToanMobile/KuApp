@@ -556,7 +556,7 @@ class StylesText {
 class Config {
   //App Font
   static const String defaultFont = "Roboto";
-  static const linkHome = 'https://kucasino.ltd/';
+  static const linkHome = 'https://kucasino.ltd/home';
   static const linkLogin = 'https://ku.ku999.net/Mobile/Home/Login';
   static const linkRegister = 'https://ku.ku999.net/Mobile/Register/Register';
   static const linkForgetPass = 'https://ku.ku999.net/Mobile/Member/ForgetPwd';

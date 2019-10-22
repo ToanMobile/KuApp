@@ -198,7 +198,7 @@ class VoucherState extends State<Voucher> {
       if (tkController.text.length == 0) {
         return "Không được để trống!";
       } else if (tkController.text.length < 4 || tkController.text.length > 10) {
-        return "Vui lòng nhập số tài khoản(4-10 chữ số)!";
+        return "Vui lòng nhập tên tài khoản(4-10 ký tự)!";
       }
     }
     return "";

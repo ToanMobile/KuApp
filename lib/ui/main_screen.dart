@@ -81,10 +81,11 @@ class MainState extends State<Main> {
         leading: new Icon(
           d.icon,
           color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black,
+          size: 40,
         ),
         title: new Text(
           d.title,
-          style: TextStyle(color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black),
+          style: TextStyle(color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black, fontSize: 16),
         ),
         selected: i == _selectedDrawerIndex,
         onTap: () => _onSelectItem(i),
