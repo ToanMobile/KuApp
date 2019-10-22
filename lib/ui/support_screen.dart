@@ -1,7 +1,7 @@
-import 'package:KUCasino.ldt/ui/contact_screen.dart';
-import 'package:KUCasino.ldt/ui/forget_pass_screen.dart';
-import 'package:KUCasino.ldt/ui/signup_screen.dart';
-import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino/ui/contact_screen.dart';
+import 'package:KUCasino/ui/forget_pass_screen.dart';
+import 'package:KUCasino/ui/signup_screen.dart';
+import 'package:KUCasino/utils/uidata.dart';
 import 'package:flutter/material.dart';
 
 import 'not_found_page.dart';

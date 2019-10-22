@@ -1,4 +1,4 @@
-import 'package:KUCasino.ldt/widget/text_input_validation.dart';
+import 'package:KUCasino/widget/text_input_validation.dart';
 import 'package:flutter/material.dart';
 
 class FormVoucher extends StatefulWidget {

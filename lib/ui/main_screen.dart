@@ -1,11 +1,11 @@
 import 'dart:io' show Platform, exit;
 
-import 'package:KUCasino.ldt/ui/home_screen.dart';
-import 'package:KUCasino.ldt/ui/not_found_page.dart';
-import 'package:KUCasino.ldt/ui/support_screen.dart';
-import 'package:KUCasino.ldt/ui/voucher_screen.dart';
-import 'package:KUCasino.ldt/ui/welcome_screen.dart';
-import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino/ui/home_screen.dart';
+import 'package:KUCasino/ui/not_found_page.dart';
+import 'package:KUCasino/ui/support_screen.dart';
+import 'package:KUCasino/ui/voucher_screen.dart';
+import 'package:KUCasino/ui/welcome_screen.dart';
+import 'package:KUCasino/utils/uidata.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

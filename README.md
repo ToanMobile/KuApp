@@ -1,4 +1,4 @@
-# KUCasino.ldt
+# KUCasino
 
 A new Flutter application.
 

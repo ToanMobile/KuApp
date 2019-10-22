@@ -1,8 +1,8 @@
-import 'package:KUCasino.ldt/ui/contact_webview_screen.dart';
-import 'package:KUCasino.ldt/ui/forget_pass_webview_screen.dart';
-import 'package:KUCasino.ldt/ui/home_link_screen.dart';
-import 'package:KUCasino.ldt/ui/main_screen.dart';
-import 'package:KUCasino.ldt/ui/not_found_page.dart';
+import 'package:KUCasino/ui/contact_webview_screen.dart';
+import 'package:KUCasino/ui/forget_pass_webview_screen.dart';
+import 'package:KUCasino/ui/home_link_screen.dart';
+import 'package:KUCasino/ui/main_screen.dart';
+import 'package:KUCasino/ui/not_found_page.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {

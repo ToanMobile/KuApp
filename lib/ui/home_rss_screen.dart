@@ -1,5 +1,5 @@
-import 'package:KUCasino.ldt/utils/uidata.dart';
-import 'package:KUCasino.ldt/widget/filled_round_button.dart';
+import 'package:KUCasino/utils/uidata.dart';
+import 'package:KUCasino/widget/filled_round_button.dart';
 import 'package:flutter/material.dart';
 
 class HomeRssScreen extends StatefulWidget {

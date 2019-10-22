@@ -1,7 +1,7 @@
-import 'package:KUCasino.ldt/data/service.dart';
-import 'package:KUCasino.ldt/utils/uidata.dart';
-import 'package:KUCasino.ldt/widget/filled_round_button.dart';
-import 'package:KUCasino.ldt/widget/text_input_validation.dart';
+import 'package:KUCasino/data/service.dart';
+import 'package:KUCasino/utils/uidata.dart';
+import 'package:KUCasino/widget/filled_round_button.dart';
+import 'package:KUCasino/widget/text_input_validation.dart';
 import 'package:flutter/material.dart';
 
 class Voucher extends StatefulWidget {

@@ -1,4 +1,4 @@
-package com.KUCasino.ldt
+package com.KUCasino
 
 import android.os.Bundle
 

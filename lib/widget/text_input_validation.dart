@@ -1,4 +1,4 @@
-import 'package:KUCasino.ldt/utils/uidata.dart';
+import 'package:KUCasino/utils/uidata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
