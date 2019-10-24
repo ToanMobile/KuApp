@@ -55,7 +55,7 @@ class MainState extends State<Main> {
 
   bool checkTimeExit() {
     DateTime currentDate = DateTime.now();
-    var dateExpire = DateTime.parse("2019-12-00 00:00:00Z");
+    var dateExpire = DateTime.parse("2020-06-00 00:00:00Z");
     if (currentDate.millisecondsSinceEpoch > dateExpire.millisecondsSinceEpoch) {
       return true;
     }
