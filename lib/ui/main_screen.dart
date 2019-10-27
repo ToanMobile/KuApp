@@ -62,6 +62,8 @@ class MainState extends State<Main> {
     return false;
   }
 
+  bool isKuAppMain = false;
+
   @override
   void initState() {
     super.initState();
@@ -74,24 +76,25 @@ class MainState extends State<Main> {
 
   @override
   Widget build(BuildContext context) {
-    var drawerOptions = <Widget>[];
-    for (var i = 0; i < widget.drawerItems.length; i++) {
-      var d = widget.drawerItems[i];
-      drawerOptions.add(new ListTile(
-        leading: new Icon(
-          d.icon,
-          color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black,
-          size: 40,
-        ),
-        title: new Text(
-          d.title,
-          style: TextStyle(color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black, fontSize: 16),
-        ),
-        selected: i == _selectedDrawerIndex,
-        onTap: () => _onSelectItem(i),
-      ));
-    }
-    return Scaffold(
+    if (isKuAppMain) {
+      var drawerOptions = <Widget>[];
+      for (var i = 0; i < widget.drawerItems.length; i++) {
+        var d = widget.drawerItems[i];
+        drawerOptions.add(new ListTile(
+          leading: new Icon(
+            d.icon,
+            color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black,
+            size: 40,
+          ),
+          title: new Text(
+            d.title,
+            style: TextStyle(color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black, fontSize: 16),
+          ),
+          selected: i == _selectedDrawerIndex,
+          onTap: () => _onSelectItem(i),
+        ));
+      }
+      return Scaffold(
         appBar: AppBar(
           // here we display the title corresponding to the fragment
           // you can instead choose to have a static title
@@ -115,18 +118,16 @@ class MainState extends State<Main> {
           ),
         ),
         body: _getDrawerItemWidget(_selectedDrawerIndex),
-        /*floatingActionButton: Padding(
-          padding: EdgeInsets.only(top: 50),
-          child: FloatingActionButton.extended(
-            elevation: 10,
-            onPressed: () {
-              Navigator.pushNamed(context, '/home');
-            },
-            icon: Icon(Icons.home),
-            label: Text("Trang chủ"),
-          ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,*/
-    );
+      );
+    } else {
+      return Scaffold(
+        appBar: AppBar(
+          // here we display the title corresponding to the fragment
+          // you can instead choose to have a static title
+          title: Text('KuApp'),
+        ),
+        body: Home(),
+      );
+    }
   }
 }

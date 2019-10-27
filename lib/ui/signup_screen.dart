@@ -73,7 +73,7 @@ class SignUp extends StatelessWidget {
               height: 10,
             ),
             Text(
-                'Bước 4: Bạn cần hoàn tất thông tin trong mục Rút tiền gồm Điền họ tên chính xác (Ví dụ: Nguyen Van A) và Hồ sơ tài khoản ngân hàng. Dựa vào đây sau này bạn sẽ rút về thẻ nên chính xác nhé!'),
+                'Bước 4: Bạn cần hoàn tất thông tin trong mục Rút gồm Điền họ tên chính xác (Ví dụ: Nguyen Van A) và Hồ sơ tài khoản ngân hàng. Dựa vào đây sau này bạn sẽ rút về thẻ nên chính xác nhé!'),
             const SizedBox(
               height: 10,
             ),
