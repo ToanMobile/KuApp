@@ -23,7 +23,7 @@ class Welcome extends StatelessWidget {
                 Text(
                     'KUCASINO là ứng dụng đầu tiên và hàng đầu hiên nay mới được ra mắt bởi đội ngũ phát triển lập trình của chúng tôi.\n\nHiện đang đi đầu trong lĩnh vực giải trí hiện nay, chúng tôi với 15 năm kinh nghiệm trong các lĩnh vực "giải trí"... và các hạng mục khác.\n\nKUCASINO được kế thừa và phát triển từ phiên bản cũ THA.\n\nGiao diện và các trò chơi được thêm vào nhằm tăng trải nghiệm người dùng.\n\nKUCASINO hiện được đặt trụ sở tại tòa cao ốc RCBC tại thủ đô của Manila, đồng thời được cấp phép Isle of Man & Cagayan Economic Zone and Free Port theo sự giám sát và bảo trợ của chính phủ Philippines.',
                     style: StylesText.body15LeftRegularSlate),
-                const SizedBox(height: 10),
+                const SizedBox(height: 30),
                 Text('GIỚI THIỆU VỀ ĐỘI NGŨ PHÁT TRIỂN KUCASINO',
                     style: StylesText.headline3RightBold, textAlign: TextAlign.center),
                 const SizedBox(height: 10),

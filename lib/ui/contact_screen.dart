@@ -6,6 +6,8 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Config.screenHome = false;
-    return WebviewKuApp(Config.linkHomeSupport, true);
+    return Scaffold(
+      body: WebviewKuApp(Config.linkHomeSupport, true),
+    );
   }
 }

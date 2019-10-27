@@ -62,8 +62,6 @@ class MainState extends State<Main> {
     return false;
   }
 
-  bool isKuAppMain = false;
-
   @override
   void initState() {
     super.initState();
@@ -76,58 +74,47 @@ class MainState extends State<Main> {
 
   @override
   Widget build(BuildContext context) {
-    if (isKuAppMain) {
-      var drawerOptions = <Widget>[];
-      for (var i = 0; i < widget.drawerItems.length; i++) {
-        var d = widget.drawerItems[i];
-        drawerOptions.add(new ListTile(
-          leading: new Icon(
-            d.icon,
-            color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black,
-            size: 40,
-          ),
-          title: new Text(
-            d.title,
-            style: TextStyle(color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black, fontSize: 16),
-          ),
-          selected: i == _selectedDrawerIndex,
-          onTap: () => _onSelectItem(i),
-        ));
-      }
-      return Scaffold(
-        appBar: AppBar(
-          // here we display the title corresponding to the fragment
-          // you can instead choose to have a static title
-          title: Text(widget.drawerItems[_selectedDrawerIndex].title),
+    var drawerOptions = <Widget>[];
+    for (var i = 0; i < widget.drawerItems.length; i++) {
+      var d = widget.drawerItems[i];
+      drawerOptions.add(new ListTile(
+        leading: new Icon(
+          d.icon,
+          color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black,
+          size: 40,
         ),
-        drawer: Drawer(
-          child: Column(
-            children: <Widget>[
-              Container(
-                color: Colors.white,
-                width: MediaQuery.of(context).size.width,
-                height: 200,
-                margin: EdgeInsets.only(top: 50),
-                child: Image.asset(
-                  UIData.iconApp,
-                  fit: BoxFit.fitWidth,
-                ),
-              ),
-              Column(children: drawerOptions)
-            ],
-          ),
+        title: new Text(
+          d.title,
+          style: TextStyle(color: _selectedDrawerIndex == i ? Colors.lightBlueAccent : Colors.black, fontSize: 16),
         ),
-        body: _getDrawerItemWidget(_selectedDrawerIndex),
-      );
-    } else {
-      return Scaffold(
-        appBar: AppBar(
-          // here we display the title corresponding to the fragment
-          // you can instead choose to have a static title
-          title: Text('KuApp'),
-        ),
-        body: Home(),
-      );
+        selected: i == _selectedDrawerIndex,
+        onTap: () => _onSelectItem(i),
+      ));
     }
+    return Scaffold(
+      appBar: AppBar(
+        // here we display the title corresponding to the fragment
+        // you can instead choose to have a static title
+        title: Text(widget.drawerItems[_selectedDrawerIndex].title),
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            Container(
+              color: Colors.white,
+              width: MediaQuery.of(context).size.width,
+              height: 200,
+              margin: EdgeInsets.only(top: 50),
+              child: Image.asset(
+                UIData.iconApp,
+                fit: BoxFit.fitWidth,
+              ),
+            ),
+            Column(children: drawerOptions)
+          ],
+        ),
+      ),
+      body: _getDrawerItemWidget(_selectedDrawerIndex),
+    );
   }
 }
