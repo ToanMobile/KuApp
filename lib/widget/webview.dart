@@ -19,6 +19,8 @@ class MyInappBrowser extends InAppBrowser {
   @override
   Future onLoadStop(String url) async {
     print("\n\nStopped $url\n\n");
+    this.webViewController.injectScriptCode("var elements = document.getElementsByClassName('mobile-header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}");
+    this.webViewController.injectScriptCode("var elements = document.getElementsByClassName('bg_header'); for(var i=0; i<elements.length; i++) { elements[i].remove();}");
   }
 
   @override
