@@ -1,9 +1,12 @@
 import 'package:KUCasino/utils/uidata.dart';
 import 'package:KUCasino/widget/filled_round_button.dart';
+import 'package:KUCasino/widget/webview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_inappbrowser/flutter_inappbrowser.dart';
 
 class ForgetPass extends StatelessWidget {
-  // This widget is the root of your application.
+  final MyInappBrowser browser = new MyInappBrowser();
+
   @override
   Widget build(BuildContext context) {
     Config.screenHome = false;
@@ -26,7 +29,15 @@ class ForgetPass extends StatelessWidget {
               child: FilledRoundButton.withGradient(
                 gradientColor: MyColors.redMedium_tanHide_gradient,
                 text: Text("Đăng ký", style: StylesText.tagLine15SemiBoldWhite),
-                cb: () => Navigator.pushNamed(context, '/home'),
+                cb: () {
+                  browser.open(url: Config.linkHome, options: [
+                    InAppWebViewOptions(
+                      useShouldOverrideUrlLoading: true,
+                      useOnLoadResource: true,
+                    ),
+                    InAppBrowserOptions(toolbarTop: false, hideUrlBar: true)
+                  ]);
+                },
               ),
             ),
             const SizedBox(

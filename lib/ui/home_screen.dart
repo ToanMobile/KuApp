@@ -1,8 +1,9 @@
 import 'package:KUCasino/ui/not_found_page.dart';
 import 'package:KUCasino/ui/voucher_screen.dart';
 import 'package:KUCasino/utils/uidata.dart';
+import 'package:KUCasino/widget/webview.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_inappbrowser/flutter_inappbrowser.dart';
 import 'contact_screen.dart';
 import 'home_rss_screen.dart';
 
@@ -15,11 +16,21 @@ class Home extends StatefulWidget {
 
 class HomeState extends State<Home> {
   int _selectedBottomIndex = 0;
-
+  final MyInappBrowser browser = new MyInappBrowser();
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedBottomIndex = index;
-    });
+    if (index == 2) {
+      browser.open(url: Config.linkHomeSupport, options: [
+        InAppWebViewOptions(
+          useShouldOverrideUrlLoading: true,
+          useOnLoadResource: true,
+        ),
+        InAppBrowserOptions(toolbarTop: false, hideUrlBar: true)
+      ]);
+    } else {
+      setState(() {
+        _selectedBottomIndex = index;
+      });
+    }
   }
 
   _getBottomItemWidget(int pos) {

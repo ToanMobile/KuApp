@@ -28,8 +28,8 @@ dependencies:
   shared_preferences: ^0.5.3+4
   intl: ^0.16.0
   flutter_local_notifications: ^0.8.4
-  webview_flutter:
-    path: /Volumes/Data/Work/KuApp/KuApp/webview_flutter
+  flutter_inappbrowser:
+    path: library/flutter_inappbrowser
 
 dev_dependencies:
   flutter_test:

@@ -1,8 +1,12 @@
 import 'package:KUCasino/utils/uidata.dart';
 import 'package:KUCasino/widget/filled_round_button.dart';
+import 'package:KUCasino/widget/webview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_inappbrowser/flutter_inappbrowser.dart';
 
 class HomeRssScreen extends StatefulWidget {
+  final MyInappBrowser browser = new MyInappBrowser();
+
   @override
   State<StatefulWidget> createState() {
     return HomeRssState();
@@ -10,7 +14,6 @@ class HomeRssScreen extends StatefulWidget {
 }
 
 class HomeRssState extends State<HomeRssScreen> {
-
   @override
   Widget build(BuildContext context) {
     Config.screenHome = true;
@@ -27,7 +30,18 @@ class HomeRssState extends State<HomeRssScreen> {
               child: FilledRoundButton.withGradient(
                 gradientColor: MyColors.redMedium_tanHide_gradient,
                 text: Text("Trang chủ", style: StylesText.tagLine15SemiBoldWhite),
-                cb: () => Navigator.pushNamed(context, '/home'),
+                cb: () {
+                  widget.browser.open(url: Config.linkHome, options: [
+                    InAppWebViewOptions(
+                      useShouldOverrideUrlLoading: true,
+                      useOnLoadResource: true,
+                    ),
+                    InAppBrowserOptions(
+                      toolbarTop: false,
+                      hideUrlBar: true
+                    )
+                  ]);
+                },
               ),
             ),
           ],

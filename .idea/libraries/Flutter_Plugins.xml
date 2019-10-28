@@ -3,8 +3,7 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.8.4" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.4+1" />
-      <root url="file://$PROJECT_DIR$/flutter_plugin_webview" />
-      <root url="file://$PROJECT_DIR$/webview_flutter" />
+      <root url="file://$PROJECT_DIR$/library/flutter_inappbrowser" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
