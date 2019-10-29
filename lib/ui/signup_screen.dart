@@ -1,12 +1,9 @@
 import 'package:KUCasino/utils/uidata.dart';
 import 'package:KUCasino/widget/filled_round_button.dart';
-import 'package:KUCasino/widget/webview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_inappbrowser/flutter_inappbrowser.dart';
 
 class SignUp extends StatelessWidget {
   //=> WebviewKUCasino(Config.linkRegister);
-  final MyInappBrowser browser = new MyInappBrowser();
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +39,10 @@ class SignUp extends StatelessWidget {
               width: 200,
               height: 50,
               child: FilledRoundButton.withGradient(
-                  gradientColor: MyColors.redMedium_tanHide_gradient,
-                  text: Text("Trang chủ", style: StylesText.tagLine15SemiBoldWhite),
-                  cb: () {
+                gradientColor: MyColors.redMedium_tanHide_gradient,
+                text: Text("Trang chủ", style: StylesText.tagLine15SemiBoldWhite),
+                cb: () => Navigator.pushNamed(context, '/home'),
+                /*cb: () {
                         browser.open(url: Config.linkHome, options: [
                           InAppWebViewOptions(
                             useShouldOverrideUrlLoading: true,
@@ -52,7 +50,8 @@ class SignUp extends StatelessWidget {
                           ),
                           InAppBrowserOptions(toolbarTop: false, hideUrlBar: true)
                         ]);
-                      }),
+                      }*/
+              ),
             ),
             const SizedBox(
               height: 10,

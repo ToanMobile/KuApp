@@ -3,8 +3,7 @@ package io.flutter.plugins;
 import io.flutter.plugin.common.PluginRegistry;
 import com.dexterous.flutterlocalnotifications.FlutterLocalNotificationsPlugin;
 import io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin;
-import com.pichillilorenzo.flutter_inappbrowser.InAppBrowserFlutterPlugin;
-
+import com.flutter_webview_plugin.FlutterWebviewPlugin;
 /**
  * Generated file. Do not edit.
  */
@@ -15,7 +14,7 @@ public final class GeneratedPluginRegistrant {
     }
     FlutterLocalNotificationsPlugin.registerWith(registry.registrarFor("com.dexterous.flutterlocalnotifications.FlutterLocalNotificationsPlugin"));
     SharedPreferencesPlugin.registerWith(registry.registrarFor("io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin"));
-    InAppBrowserFlutterPlugin.registerWith(registry.registrarFor("com.pichillilorenzo.flutter_inappbrowser.InAppBrowserFlutterPlugin"));
+    FlutterWebviewPlugin.registerWith(registry.registrarFor("com.flutter_webview_plugin.FlutterWebviewPlugin"));
   }
 
   private static boolean alreadyRegisteredWith(PluginRegistry registry) {

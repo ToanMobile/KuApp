@@ -28,8 +28,10 @@ dependencies:
   shared_preferences: ^0.5.3+4
   intl: ^0.16.0
   flutter_local_notifications: ^0.8.4
-  flutter_inappbrowser:
-    path: library/flutter_inappbrowser
+#  flutter_inappbrowser:
+#    path: library/flutter_inappbrowser
+#  webview_flutter: ^0.3.15+1
+  flutter_webview_plugin: ^0.3.8
 
 dev_dependencies:
   flutter_test:
