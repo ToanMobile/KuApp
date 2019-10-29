@@ -8,8 +8,8 @@
         <option name="modules">
           <set>
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.8.4/android" />
-            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.3+5/android" />
-            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/webview_flutter-0.3.15+1/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_webview_plugin-0.3.8/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.4+3/android" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
           </set>

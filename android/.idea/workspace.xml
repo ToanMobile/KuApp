@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fa40331-67d4-40c6-89c5-e7334ccaa489" name="Default Changelist" comment="">
+    <list default="true" id="59d2416a-5b68-4590-a953-4f16e7d3e7b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ku_app/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_webkit_webkit_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/key.properties" beforeDir="false" afterPath="$PROJECT_DIR$/key.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/ui/main_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/main_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/ui/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/signup_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/widget/webview.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/widget/webview.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +23,7 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_XL_API_26" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_16" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -41,14 +45,24 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="android" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,11 +151,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6fa40331-67d4-40c6-89c5-e7334ccaa489" name="Default Changelist" comment="" />
-      <created>1572192430211</created>
+      <changelist id="59d2416a-5b68-4590-a953-4f16e7d3e7b5" name="Default Changelist" comment="" />
+      <created>1572354818681</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572192430211</updated>
+      <updated>1572354818681</updated>
     </task>
     <servers />
   </component>
@@ -157,8 +171,8 @@
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Run" weight="0.3298647" />
-      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Run" />
+      <window_info active="true" anchor="bottom" id="Logcat" visible="true" weight="0.7211238" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="Debug" />

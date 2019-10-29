@@ -9,7 +9,7 @@
          FlutterApplication and put your custom class here. -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:name="io.flutter.app.FlutterApplication"
+        android:name=".App"
         android:label="KUCasino"
         android:icon="@mipmap/launcher_icon">
         <activity
