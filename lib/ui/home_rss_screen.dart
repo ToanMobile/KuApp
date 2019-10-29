@@ -33,13 +33,17 @@ class HomeRssState extends State<HomeRssScreen> {
                 cb: () {
                   widget.browser.open(url: Config.linkHome, options: [
                     InAppWebViewOptions(
-                      useShouldOverrideUrlLoading: true,
-                      useOnLoadResource: true,
+                        useShouldOverrideUrlLoading: true,
+                        useOnLoadResource: true,
+                        javaScriptCanOpenWindowsAutomatically: true
                     ),
                     InAppBrowserOptions(
-                      toolbarTop: false,
-                      hideUrlBar: true
-                    )
+                        toolbarTop: false,
+                        hideUrlBar: true
+                    ),
+                    AndroidInAppWebViewOptions(
+                        domStorageEnabled: true,
+                    ),
                   ]);
                 },
               ),
